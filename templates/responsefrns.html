@@ -1,0 +1,24 @@
+{% for row in fournisseur %}  
+  <!--<li>{{row.Prenom_Fournisseur}} <br/><span style='font-size:12px;'>{{row.Telephone_Fournisseur}}</span></li>-->
+
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="/static/images/client.jpg" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">{{row.Nom_Fournisseur}} {{row.Prenom_Fournisseur}}</h5>
+        <p class="card-text">
+            <ul>
+            <li>Adresse: {{row.Adresse_Fournisseur}} </li>
+            <li>Telephone: {{row.Telephone_Fournisseur}} </li>
+            <li>Email: {{row.Email_Fournisseur}} </li>
+            </ul></p>
+        <a href="/edit_fournisseur/{{row.Id_Fournisseur}}" class="btn btn-success">Modifier</a>
+        <a href="/delete_fournisseur/{{row.Id_Fournisseur}}" class="btn btn-danger">Supprimer</a>
+        
+
+        
+        </div>
+    </div>
+
+</div>
+{% endfor %}

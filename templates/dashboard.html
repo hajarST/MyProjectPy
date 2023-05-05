@@ -1,0 +1,55 @@
+{% extends 'layout2.html' %}
+ 
+{% block body %}
+  <h1>Dashboard     <small> Bienvenue {{session.Nom_Utilisateur}}</small></h1>
+
+  <div class="container">
+    <div class="row">
+
+  <!--{% for client in clients %}-->
+      <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                  
+                    <img class="card-img-top" src="/static/images/client.jpg" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title">Nombre clients</h5>
+                    <p class="card-text">
+                        est: {{clients.nbr}} 
+                    </p>
+                   
+                   
+                    </div>
+                </div>
+      </div>
+      <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                  
+                  <img class="card-img-top" src="/static/images/fournisseur.jpg" alt="Card image cap">
+                  <div class="card-body">
+                  <h5 class="card-title">Nombre fournisseurs</h5>
+                  <p class="card-text">
+                      est: {{fournisseurs.nbr}} 
+                  </p>
+                 
+                 
+                  </div>
+              </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          
+          <img class="card-img-top" src="/static/images/produit.png" alt="Card image cap">
+          <div class="card-body">
+          <h5 class="card-title">Nombre produits</h5>
+          <p class="card-text">
+              est: {{produits.nbr}} 
+          </p>
+         
+         
+          </div>
+      </div>
+</div>
+     <!--{% endfor %}--> 
+      </div>
+   </div>
+{% endblock %}

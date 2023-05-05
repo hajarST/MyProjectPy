@@ -1,0 +1,11 @@
+-----------------Application web Gestion de stock ------------------
+
+username : hajar
+password  : 1234
+
+-----------------Membres de groupe ----------------------------------
+
+SABT HAJAR
+BENCHLIKHA NOUH
+MOHAMED AMINE EL BAZI
+FATIMA EZZAHRA SALEH

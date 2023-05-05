@@ -1,0 +1,50 @@
+{% extends "layout2.html" %}
+{% block body %}
+ 
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/update_commande_vente/{{commandeVente.Id_Commande_Vente}}" method="POST">
+          <!--<select name="Id_Produit" data-live-search="true"   id="produit" class="form-control" title="Selectionnez produit" >
+            {% for p in produits %}
+            <option value='{{p.Id_Produit}}'>{{p.Nom_Produit}}</option>
+            {% endfor %}
+            </select> -->
+            <div class="form-group">
+              <input type="text" name="Id_Produit" value="{{commandeVente.Id_Produit}}" class="form-control">
+            </div>
+          <div class="form-group">
+            <input type="text" name="Date_Commande_Vente" value="{{commandeVente.Date_Commande_Vente}}" class="form-control">
+          </div>
+          <!--<div class="form-group"> 
+            <select name="Id_Fournisseur" data-live-search="true"   id="fournisseur" class="form-control" title="Selectionnez fournisseur" >
+              {% for f in fournisseurs %}
+              <option value='{{f.Id_Fournisseur}}'>{{f.Nom_Fournisseur,f.Prenom_Fournisseur}}</option>
+              {% endfor %}
+              </select> 
+          </div>-->
+          <div class="form-group">
+            <input type="text" name="Id_Client" value="{{commandeVente.Id_Client}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="Quantite_A_Vendre" value="{{commandeVente.Quantite_A_Vendre}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="TOTAL_HT" value="{{commandeVente.TOTAL_HT}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="TVA" value="{{commandeVente.TVA}}" class="form-control">
+          </div>
+          
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+ 
+{% endblock %}

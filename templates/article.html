@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+ 
+{% block body %}
+  <h1>{{produit.Nom_Produit}}</h1>
+  <small>Prix: {{produit.Prix}} Quantite: {{produit.Quantite}}</small>
+  <hr>
+  <div>
+    {{article.body | safe}}
+  </div>
+{% endblock %}

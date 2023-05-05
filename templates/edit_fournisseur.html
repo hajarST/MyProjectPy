@@ -1,0 +1,33 @@
+{% extends "layout2.html" %}
+{% block body %}
+ 
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/update_fournisseur/{{fournisseur.Id_Fournisseur}}" method="POST">
+          <div class="form-group">
+            <input type="text" name="Nom_Fournisseur" value="{{fournisseur.Nom_Fournisseur}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="Prenom_Fournisseur" value="{{fournisseur.Prenom_Fournisseur}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="Adresse_Fournisseur" value="{{fournisseur.Adresse_Fournisseur}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="Telephone_Fournisseur" value="{{fournisseur.Telephone_Fournisseur}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="Email_Fournisseur" value="{{fournisseur.Email_Fournisseur}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+ 
+{% endblock %}

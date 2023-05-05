@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+ 
+{% block body %}
+  <h1>Ajouter Commande Vente</h1>
+  {% from "includes/_formhelpers.html" import render_field %}
+  <form method="POST" action="">
+    <div class="form-group">
+      {{ render_field(form.Id_Commande_Vente, class_="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ render_field(form.Id_Produit, class_="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ render_field(form.Date_Commande_Vente, class_="form-control", id="editor") }}
+    </div>
+    <div class="form-group">
+      {{ render_field(form.Id_Client, class_="form-control", id="editor") }}
+    </div>
+    <div class="form-group">
+      {{ render_field(form.Quantite_A_Vendre, class_="form-control", id="editor") }}
+    </div>
+    <div class="form-group">
+      {{ render_field(form.TOTAL_HT, class_="form-control", id="editor") }}
+    </div>
+    <div class="form-group">
+      {{ render_field(form.TVA, class_="form-control", id="editor") }}
+    </div>
+    
+    <p><input class="btn btn-primary" type="submit" value="Submit">
+  </form>
+{% endblock %}
